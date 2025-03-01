@@ -42,7 +42,7 @@ pipeline {
                     script{
                         docker.withRegistry('', 'docker_hub') {
                         sh 'docker tag "${DOCKER_IMAGE_NAME}" deomoney721/mini_calculator:latest'
-                        sh 'docker push feomoney721/mini_calculator:latest'
+                        sh 'docker push domoney721/mini_calculator:latest'
                         }
                     }
                 }
@@ -59,4 +59,3 @@ pipeline {
             }
         }
     }
-}
