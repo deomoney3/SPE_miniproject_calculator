@@ -8,6 +8,11 @@
         name: docker.io
         state: present
 
+    - name: Install Docker SDK for Python
+      pip:
+        name: docker
+        state: present
+
     - name: Pull Docker image
       docker_image:
         name: deomoney721/mini_calculator
