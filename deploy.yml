@@ -8,8 +8,19 @@
         name: docker.io
         state: present
 
-    - name: Pull Docker Image
-      command: docker pull deomoney721/mini_calculator:latest
+    - name: Pull Docker image
+      docker_image:
+        name: deomoney721/mini_calculator
+        tag: latest
+        source: pull
 
-    - name: Run Docker Container
-      command: docker run -d --name scientific-calculator_mini-project deomoney721/mini_calculator:latest
+    - name: Stop and remove existing container (if any)
+      docker_container:
+        name: scientific-calculator_mini-project
+        state: absent
+
+    - name: Run Docker container
+      docker_container:
+        name: scientific-calculator_mini-project
+        image: deomoney721/mini_calculator:latest
+        state: started
