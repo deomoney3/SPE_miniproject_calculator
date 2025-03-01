@@ -1,0 +1,15 @@
+---
+- name: Deploy Calculator App with Docker
+  hosts: MyHost
+  become: yes
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Pull Docker Image
+      command: docker pull deomoney721/mini_calculator:latest
+
+    - name: Run Docker Container
+      command: docker run -d --name ScientificCalculator_miniProject deomoney721/mini_calculator:latest
