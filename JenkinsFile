@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE_NAME = 'scientific-calculator'
+        DOCKER_IMAGE_NAME = 'mini_calculator'
         GITHUB_REPO_URL = 'https://github.com/deomoney3/SPE_miniproject_calculator.git'
     }
 
