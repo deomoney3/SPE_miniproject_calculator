@@ -12,4 +12,4 @@
       command: docker pull deomoney721/mini_calculator:latest
 
     - name: Run Docker Container
-      command: docker run -d --name ScientificCalculator_miniProject deomoney721/mini_calculator:latest
+      command: docker run -d --name scientific-calculator_mini-project deomoney721/mini_calculator:latest
