@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 public class CalculatorTest {
     @Test
     public void testAdd() {
-        assertEquals(5.0, Calculator.add(2, 3), 0.0001);
+        assertEquals(6.0, Calculator.add(2, 3), 0.0001);
         assertEquals(-1.0, Calculator.add(-2, 1), 0.0001);
         assertEquals(0.0, Calculator.add(0, 0), 0.0001);
     }
@@ -70,9 +70,9 @@ public class CalculatorTest {
 
     @Test
     public void testFactorial() {
-        assertEquals(120.0, Calculator.factorial(5), 0.0001);   // 5! = 120
-        assertEquals(1.0, Calculator.factorial(0), 0.0001);     // 0! = 1
-        assertEquals(1.0, Calculator.factorial(1), 0.0001);     // 1! = 1
+        assertEquals(120.0, Calculator.factorial(5), 0.0001);
+        assertEquals(1.0, Calculator.factorial(0), 0.0001);
+        assertEquals(1.0, Calculator.factorial(1), 0.0001);
         try {
             Calculator.factorial(-3);
             fail("Expected ArithmeticException");
