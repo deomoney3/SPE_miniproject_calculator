@@ -6,5 +6,3 @@ WORKDIR /app
 COPY target/scientific-calculator_mini-project-1.0-SNAPSHOT.jar /app/scientific-calculator_mini-project.jar
 
 CMD ["java", "-jar", "/app/scientific-calculator_mini-project.jar"]
-
-

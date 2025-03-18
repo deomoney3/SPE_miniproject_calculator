@@ -55,6 +55,7 @@ pipeline {
                         playbook: 'deploy.yml',
                         inventory: 'inventory'
                     )
+                    //we can have also written sh'ansiblePlaybook -i inventory deploy.yml'
                 }
             }
         }
